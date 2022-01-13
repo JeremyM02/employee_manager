@@ -22,11 +22,12 @@ block content
           td= employee.jobtitle
           td
             div #{employee.streetline1}
-            div #{employee.streeetline2}
+            div #{employee.streetline2}
             div= `${employee.city}, ${employee.state} ${employee.zip}`
           td= employee.phonenumber
           td= employee.yearhired
           td
             div.actions
               a(href=`/update/${employee.id}`) Edit
+              a(href=`/delete/${employee.id}`) Delete
 

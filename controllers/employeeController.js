@@ -10,6 +10,18 @@ module.exports.displayEmployees = async function(req, res){
 module.exports.renderAddEmployeeForm = function(req, res) {
     res.render('createUserForm',
         {
+            employee: {
+              firstname: '',
+              lastname:'',
+              jobtitle:jobtitles[0],
+              streetline1:'',
+              streetline2:'',
+              city:'',
+              state:states[0],
+              zip:'',
+              phonenumber:'',
+              yearhired:''
+            },
             jobtitles,
             stateslist: states
         });
@@ -61,5 +73,14 @@ module.exports.updateEmployee = async function(req, res){
                 id: req.params.id
             }
         });
+    res.redirect('/');
+};
+
+module.exports.deleteEmployee = async function (req, res){
+    await Employee.destroy( {
+        where: {
+            id: req.params.id
+        }
+    });
     res.redirect('/');
 };
