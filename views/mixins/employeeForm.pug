@@ -4,10 +4,10 @@ mixin employeeForm(url, employee, jobtitles, stateslist)
         div.name-row
             div.first
                 label(for='firstname') First Name:
-                input(id='firstname' name='firstname' type=employee.firstname)
+                input(id='firstname' name='firstname' value=employee.firstname)
             div.last
                 label(for='lastname') Last Name:
-                input(id='lastname' name='lastname' type=employee.lastname)
+                input(id='lastname' name='lastname' value=employee.lastname)
 
         label(for='jobtitle') Job Title:
         select(id='jobtitle' name='jobtitle')
@@ -18,15 +18,15 @@ mixin employeeForm(url, employee, jobtitles, stateslist)
             div.streetline
                 div.streetline1
                     label(for='streetline1') Street Line 1:
-                    input(id='streetline1' name='streetline1' type=employee.streetline1)
+                    input(id='streetline1' name='streetline1' value=employee.streetline1)
 
                 div.streetline2
                     label(for='streetline2') Street Line 2:
-                    input(id='streetline2' name='streetline2' type=employee.streetline2)
+                    input(id='streetline2' name='streetline2' value=employee.streetline2)
             div.territory
                 div.city
                     label(for='city') City:
-                    input(id='city' name='city' type=employee.city)
+                    input(id='city' name='city' value=employee.city)
 
                 div.state
                     label(for='state') State:
@@ -36,16 +36,16 @@ mixin employeeForm(url, employee, jobtitles, stateslist)
 
                 div.zip
                     label(for='zip') Zip:
-                    input(id='zip' name='zip' type=employee.zip)
+                    input(id='zip' name='zip' value=employee.zip)
 
         div.personal-info-row
             div.phone
                 label(for='phonenumber') Phonenumber:
-                input(id='phonenumber' name='phonenumber' type=employee.phonenumber)
+                input(id='phonenumber' name='phonenumber' value=employee.phonenumber)
 
             div.year
                 label(for='yearhired') Year Hired:
-                input(id='yearhired' name='yearhired' type=employee.yearhired)
+                input(id='yearhired' name='yearhired' value=employee.yearhired)
 
         div.form-buttons
             a.button.cancel(href='/') Cancel
