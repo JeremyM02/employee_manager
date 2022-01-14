@@ -11,16 +11,17 @@ module.exports.renderAddEmployeeForm = function(req, res) {
     res.render('createUserForm',
         {
             employee: {
-              firstname: '',
-              lastname:'',
-              jobtitle:jobtitles[0],
-              streetline1:'',
-              streetline2:'',
-              city:'',
-              state:states[0],
-              zip:'',
-              phonenumber:'',
-              yearhired:''
+                firstname: '',
+                lastname:'',
+                jobtitle:jobtitles[0],
+                streetline1:'',
+                streetline2:'',
+                city:'',
+                state:states[0],
+                zip:'',
+                phonenumber:'',
+                yearhired:'',
+                age:''
             },
             jobtitles,
             stateslist: states
@@ -39,7 +40,8 @@ module.exports.addEmployee = async function(req, res){
             state: req.body.state,
             zip: req.body.zip,
             phonenumber: req.body.phonenumber,
-            yearhired: req.body.yearhired
+            yearhired: req.body.yearhired,
+            age: req.body.age
         }
     );
     res.redirect('/');
@@ -66,7 +68,8 @@ module.exports.updateEmployee = async function(req, res){
             state: req.body.state,
             zip: req.body.zip,
             phonenumber: req.body.phonenumber,
-            yearhired: req.body.yearhired
+            yearhired: req.body.yearhired,
+            age: req.body.age
         },
         {
             where: {
